@@ -1,6 +1,13 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+// let girafa = true;
+// let elefante = true;
+// let macaco = false;
+// let tigre = false;
+
+function compareTrue(param1, param2) {
+  if (param1 === true && param2 === true){
+    return true;
+  } return false;
 }
 
 // Desafio 2
