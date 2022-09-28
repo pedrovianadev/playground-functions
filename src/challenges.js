@@ -73,51 +73,40 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let split = string.split("");
-  let encode = [];
-  
-  for(let index = 0; index < split.length; index += 1){
-    if(split[index] === 'a'){
-      encode.push('1');
-    } else if (split[index] === 'e'){
-      encode.push('2');
-    } else if (split[index] === 'i'){
-      encode.push('3');
-    } else if (split[index] === 'o'){
-      encode.push('4');
-    } else if (split[index] === 'u'){
-      encode.push('5');
-    } else {
-      encode.push(split[index]);
-    }
-  }
-  let result = encode.join('')
-  
-  return result;
-}
+  let code = string.split('');
 
-function decode(string) {
-  let split = string.split("");
-  let decode = [];
-  
-  for(let index = 0; index < split.length; index += 1){
-    if(split[index] === '1'){
-      decode.push('a');
-    } else if (split[index] === '2'){
-      decode.push('e');
-    } else if (split[index] === '3'){
-      decode.push('i');
-    } else if (split[index] === '4'){
-      decode.push('o');
-    } else if (split[index] === '5'){
-      decode.push('u');
-    } else {
-      decode.push(split[index]);
+  for (let index = 0; index < code.length; index += 1) {
+    if (code[index] === 'a') {
+      code[index] = '1';
+    } else if (code[index] === 'e') {
+      code[index] = '2';
+    } else if (code[index] === 'i') {
+      code[index] = '3';
+    } else if (code[index] === 'o') {
+      code[index] = '4';
+    } else if (code[index] === 'u') {
+      code[index] = '5';
     }
   }
-  let result = encode.join('')
-  
-  return result;
+  return code.join('');
+}
+function decode(string) {
+  let code = string.split('');
+
+  for (let index = 0; index < code.length; index += 1) {
+    if (code[index] === '1') {
+      code[index] = 'a';
+    } else if (code[index] === '2') {
+      code[index] = 'e';
+    } else if (code[index] === '3') {
+      code[index] = 'i';
+    } else if (code[index] === '4') {
+      code[index] = 'o';
+    } else if (code[index] === '5') {
+      code[index] = 'u';
+    }
+  }
+  return code.join('');
 }
 
 // Desafio 10
